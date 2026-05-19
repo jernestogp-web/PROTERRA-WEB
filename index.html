@@ -1438,28 +1438,41 @@ footer {
 ============================================================================
 */
 
-// Lista de archivos de propiedades (orden de aparición en la web)
-const ARCHIVOS_PROPIEDADES = [
-  'casa-encinos',
-  'casa-sausalito',
-  'apto-altos',
-  'ofibodegas-z18'
-];
+// ✨ Detección automática de propiedades desde GitHub
+// Esto detecta automáticamente todos los archivos JSON sin necesidad de lista fija
+const GITHUB_USER = 'jernestogp-web';
+const GITHUB_REPO = 'PROTERRA-WEB';
+const GITHUB_API = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/_propiedades`;
 
 let propiedades = [];
 
 // Cargar todas las propiedades desde los archivos JSON
 async function cargarPropiedades() {
   try {
-    // Hacer un fetch a cada archivo JSON
-    const promesas = ARCHIVOS_PROPIEDADES.map(slug =>
-      fetch(`_propiedades/${slug}.json`)
+    // Paso 1: Pedir a GitHub la lista de archivos JSON en la carpeta _propiedades
+    const respuesta = await fetch(GITHUB_API);
+
+    if (!respuesta.ok) {
+      throw new Error('No se pudo conectar a GitHub');
+    }
+
+    const archivos = await respuesta.json();
+
+    // Filtrar solo archivos .json
+    const archivosJSON = archivos.filter(a => a.name.endsWith('.json'));
+
+    // Paso 2: Cargar cada archivo JSON
+    const promesas = archivosJSON.map(archivo =>
+      fetch(`_propiedades/${archivo.name}`)
         .then(r => r.ok ? r.json() : null)
         .catch(() => null)
     );
 
     const resultados = await Promise.all(promesas);
     propiedades = resultados.filter(p => p !== null);
+
+    // Ordenar por ID (ascendente)
+    propiedades.sort((a, b) => (a.id || 0) - (b.id || 0));
 
     // Convertir formato de Decap CMS al formato que usa el código
     propiedades = propiedades.map(p => {
