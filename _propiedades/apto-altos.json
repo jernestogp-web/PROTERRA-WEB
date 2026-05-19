@@ -1,0 +1,28 @@
+{
+  "id": 3,
+  "titulo": "Apartamento en renta — Altos de la Montaña",
+  "categoria": "apartamento",
+  "badge": "En Alquiler",
+  "ubicacion": "Zona 16, Ciudad de Guatemala",
+  "precio": "$1,400 / mes",
+  "habitaciones": "3",
+  "banos": "3 + 1 servicio",
+  "area": "210 m²",
+  "parqueos": "2",
+  "niveles": "",
+  "imagenPrincipal": "/imagenes/apto-altos/portada.jpg",
+  "galeria": [
+    { "image": "/imagenes/apto-altos/foto2.jpg" },
+    { "image": "/imagenes/apto-altos/foto3.jpg" },
+    { "image": "/imagenes/apto-altos/foto4.jpg" },
+    { "image": "/imagenes/apto-altos/foto5.jpg" },
+    { "image": "/imagenes/apto-altos/foto6.jpg" },
+    { "image": "/imagenes/apto-altos/foto7.jpg" },
+    { "image": "/imagenes/apto-altos/foto8.jpg" },
+    { "image": "/imagenes/apto-altos/foto9.jpg" },
+    { "image": "/imagenes/apto-altos/foto10.jpg" },
+    { "image": "/imagenes/apto-altos/foto11.jpg" }
+  ],
+  "video": "",
+  "descripcion": "Amplio apartamento en Altos de la Montaña con excelente distribución, tres dormitorios con baño privado y espacios cómodos para toda la familia. Incluye sala familiar, cocina, comedor y cuarto de servicio. Ubicado en zona tranquila y exclusiva de Zona 16. Incluye IVA y mantenimiento."
+}

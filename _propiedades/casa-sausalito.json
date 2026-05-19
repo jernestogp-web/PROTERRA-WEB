@@ -1,0 +1,22 @@
+{
+  "id": 2,
+  "titulo": "Casa Residencial en Sausalito",
+  "categoria": "casa",
+  "badge": "En Venta",
+  "ubicacion": "Carretera a El Salvador km 22.5, Guatemala",
+  "precio": "$1,950,000",
+  "habitaciones": "4 + 1 servicio + 1 chofer",
+  "banos": "9.5",
+  "area": "1,350 m² construidos / 2,514 vrs² terreno",
+  "parqueos": "12 (4 techados, 8 sin techo)",
+  "niveles": "",
+  "imagenPrincipal": "/imagenes/casa-sausalito/portada.jpg",
+  "galeria": [
+    { "image": "/imagenes/casa-sausalito/foto1.jpg" },
+    { "image": "/imagenes/casa-sausalito/foto2.jpg" },
+    { "image": "/imagenes/casa-sausalito/foto3.jpg" },
+    { "image": "/imagenes/casa-sausalito/foto4.jpg" }
+  ],
+  "video": "",
+  "descripcion": "Espectacular residencia con acabados de lujo, amplios espacios interiores y áreas sociales diseñadas para entretenimiento y confort. Cuenta con terraza con pérgola, jacuzzi, sauna, gimnasio, sala de eventos y jardín amplio. Ubicada en exclusivo condominio con amenidades como laguna artificial, áreas verdes, capilla y seguridad completa."
+}
